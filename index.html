@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generative Art Playground</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Generative Art Playground</h1>
+      <p>Create Unique Visuals by Manipulating a Latent Space</p>
+    </header>
+
+    <main>
+      <div class="controls-panel">
+        <h2>Controls</h2>
+        <p>Adjust the sliders to explore different visuals.</p>
+
+        <div id="sliders-container">
+          <p class="placeholder-text">Sliders are loading...</p>
+        </div>
+
+        <div class="button-group">
+          <button id="randomize-btn">Randomize</button>
+          <button id="generate-btn">Generate</button>
+          <button id="download-btn" title="Download Image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M5 20h14v-2H5v2zm7-18L5.33 9h3.34v6h6.66V9h3.33L12 2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="image-panel">
+        <canvas id="gan-canvas" width="768" height="768"></canvas>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+/* --- Google Font & Global Styles --- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --primary-color: #6a5acd; /* SlateBlue */
+  --primary-light-color: #8375e0;
+  --secondary-color: #3f92a8;
+  --text-color: #eaeaea;
+  --border-color: #333;
+  --placeholder-text-color: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+header p {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+/* --- Main Layout --- */
+main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.controls-panel {
+  width: 350px;
+  padding: 25px;
+  background-color: var(--surface-color);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls-panel h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.controls-panel p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#sliders-container .placeholder-text {
+  color: var(--placeholder-text-color);
+  font-style: italic;
+}
+
+.image-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  position: relative;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 20px 20px;
+}
+
+/* --- Canvas --- */
+#gan-canvas {
+  border: 1px solid var(--border-color);
+  background-color: #000;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+/* --- Buttons --- */
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 20px;
+}
+
+button {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#generate-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#generate-btn:not(:disabled):hover {
+  background-color: var(--primary-light-color);
+  transform: translateY(-2px);
+}
+
+#randomize-btn,
+#download-btn {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+#randomize-btn:not(:disabled):hover,
+#download-btn:not(:disabled):hover {
+  background-color: var(--border-color);
+  border-color: #555;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98) translateY(0);
+}
+
+#download-btn {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+#download-btn svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+#download-btn:not(:disabled):hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
