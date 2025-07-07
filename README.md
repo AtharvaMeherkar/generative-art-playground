@@ -3,10 +3,6 @@
 > An interactive web application for creating and exploring unique visual patterns through the manipulation of a latent space. This project transforms mathematical noise into beautiful, complex art directly in your browser using the power of TensorFlow.js.
 ---
 
-## ✨ Live Demo
-
----
-
 ## 🚀 Key Features
 
 -   **Interactive Latent Space:** 12 dedicated sliders that directly manipulate the core parameters of the generative algorithm.
