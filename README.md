@@ -5,7 +5,7 @@
 
 ## ✨ Live Demo
 
-A live demo of this project can be accessed here: **[Generative Art Playground.github.io/generative-art-playground/](https://Generative Art Playground.github.io/generative-art-playground/)**
+A live demo of this project can be accessed here: **[Generative Art Playground.github.io/generative-art-playground/](https://GenerativeArtPlayground.github.io/generative-art-playground/)**
 
 ---
 
